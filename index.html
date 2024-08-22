@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Votação de Administrador</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Escolha seu administrador da empresa</h1>
+    <p>Este administrador escolhido terá que liderar a equipe, fazer cobranças para entregar o trabalho em dias e fazer cobranças de qualquer pendência entre os sócios.</p>
+    
+    <form id="votingForm">
+        <label>
+            <input type="radio" name="admin" value="Alex Sandro Arthur Silva Santos"> Alex Sandro Arthur Silva Santos
+        </label><br>
+        <label>
+            <input type="radio" name="admin" value="Andre Luis Guimaraes Quintanilha"> Andre Luis Guimaraes Quintanilha
+        </label><br>
+        <label>
+            <input type="radio" name="admin" value="Beatriz Marques Veloso"> Beatriz Marques Veloso
+        </label><br>
+        <label>
+            <input type="radio" name="admin" value="Bruno Ian"> Bruno Ian
+        </label><br>
+        <label>
+            <input type="radio" name="admin" value="Jonathan Eduardo de Oliveira"> Jonathan Eduardo de Oliveira
+        </label><br>
+        <label>
+            <input type="radio" name="admin" value="jhonathan dos santos pimentel"> jhonathan dos santos pimentel
+        </label><br>
+        <label>
+            <input type="radio" name="admin" value="maria elena"> maria elena
+        </label><br>
+        <label>
+            <input type="radio" name="admin" value="riverson Daniel nobre rodrigues"> riverson Daniel nobre rodrigues
+        </label><br>
+        <button type="button" onclick="submitVote()">Fazer seu voto</button>
+    </form>
+
+    <p id="voteMessage"></p>
+    
+    <div id="adminLogin" class="hidden">
+        <h2>Área Administrativa</h2>
+        <form id="loginForm">
+            <label for="adminName">Nome:</label>
+            <input type="text" id="adminName" required>
+            <label for="adminPassword">Senha:</label>
+            <input type="password" id="adminPassword" required>
+            <button type="button" onclick="login()">Login</button>
+        </form>
+        <p id="loginMessage"></p>
+        <div id="voteResults" class="hidden">
+            <h2>Resultados da Votação</h2>
+            <ul id="resultsList"></ul>
+        </div>
+    </div>
+
+    <footer>
+        <a href="javascript:void(0);" onclick="showAdminLogin()">Área Administrativa</a>
+    </footer>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
